@@ -1,0 +1,5 @@
+# Añadir al final de /etc/freeradius/3.0/clients.conf
+client tplink {
+    ipaddr = 192.168.0.1
+    secret = CAMBIAR_POR_SECRETO_ALEATORIO_DE_20_O_MAS_CARACTERES
+}
