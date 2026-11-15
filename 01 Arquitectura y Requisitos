@@ -1,0 +1,16 @@
+Informe Técnico: Infraestructura de Autenticación RADIUS (WPA2-Enterprise)
+01 Arquitectura y Requisitos
+Autenticación 802.1X (WPA2-Enterprise): el router delega la validación de usuarios en un servidor FreeRADIUS 3.2.10.
+[Cliente Android]  --EAP-PEAP-->  [Router TL-WR840N]  --RADIUS UDP 1812/1813-->  [Servidor FreeRADIUS]
+   usuario juan                     192.168.0.1 (NAS)       secreto compartido        192.168.0.102
+        ^----------------- Access-Accept / Access-Reject <------------------------------+
+                           Servidor NTP (UDP 123) sincroniza la hora del servidor
+Componente
+Detalle
+Servidor
+FreeRADIUS 3.2.10 (laboratorio en Kali; perfil producción: CentOS)
+NAS
+TP-Link TL-WR840N, WPA2-Empresarial, AES
+Cliente
+Android, PEAP + MSCHAPv2
+Requisitos: IP fija del servidor, UDP 1812/1813 abiertos hacia el router, hora sincronizada (NTP), secreto idéntico en ambos lados, mínimo dos usuarios.
