@@ -1,3 +1,5 @@
+https://joanvintimilla-droid.github.io/Implementaci-n-b-sica-de-servidor-RADIUS/
+
 # Infraestructura de autenticación RADIUS (WPA2-Enterprise)
 
 Informe técnico del proyecto FreeRADIUS 3.2.10 + TP-Link TL-WR840N. Autenticación 802.1X (PEAP/MSCHAPv2): el router delega la validación de usuarios en el servidor RADIUS.
